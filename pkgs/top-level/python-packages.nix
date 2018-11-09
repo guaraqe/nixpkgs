@@ -1851,6 +1851,8 @@ in {
 
   lightning = callPackage ../development/python-modules/lightning { };
 
+  jupytext = callPackage ../development/python-modules/jupytext { };
+
   jupyter = callPackage ../development/python-modules/jupyter { };
 
   jupyter_console = if pythonOlder "3.5" then
