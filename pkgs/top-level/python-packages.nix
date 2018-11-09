@@ -420,6 +420,8 @@ in {
 
   libmr = callPackage ../development/python-modules/libmr { };
 
+  lmfit = callPackage ../development/python-modules/lmfit { };
+
   lmtpd = callPackage ../development/python-modules/lmtpd { };
 
   logster = callPackage ../development/python-modules/logster { };
