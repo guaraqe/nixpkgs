@@ -2691,6 +2691,8 @@ in {
 
   ipyleaflet = callPackage ../development/python-modules/ipyleaflet { };
 
+  ipympl = callPackage ../development/python-modules/ipympl { };
+
   ipyparallel = callPackage ../development/python-modules/ipyparallel { };
 
   ipython = if pythonOlder "3.5" then
