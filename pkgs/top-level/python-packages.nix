@@ -2689,6 +2689,8 @@ in {
     else
       callPackage ../development/python-modules/ipykernel { };
 
+  ipyleaflet = callPackage ../development/python-modules/ipyleaflet { };
+
   ipyparallel = callPackage ../development/python-modules/ipyparallel { };
 
   ipython = if pythonOlder "3.5" then
