@@ -1864,6 +1864,10 @@ in {
      else
        callPackage ../development/python-modules/jupyter_console { };
 
+  jupyterlab-git = callPackage ../development/python-modules/jupyterlab-git { };
+
+  jupyterlab-latex = callPackage ../development/python-modules/jupyterlab-latex { };
+
   jupyterlab_launcher = callPackage ../development/python-modules/jupyterlab_launcher { };
 
   jupyterlab_server = callPackage ../development/python-modules/jupyterlab_server { };
