@@ -535,13 +535,13 @@ let
         sha1 = "9326b1488c22d1a6088650a86901b2d9a90a2cbc";
       };
     };
-    "fined-1.1.0" = {
+    "fined-1.1.1" = {
       name = "fined";
       packageName = "fined";
-      version = "1.1.0";
+      version = "1.1.1";
       src = fetchurl {
-        url = "https://registry.npmjs.org/fined/-/fined-1.1.0.tgz";
-        sha1 = "b37dc844b76a2f5e7081e884f7c0ae344f153476";
+        url = "https://registry.npmjs.org/fined/-/fined-1.1.1.tgz";
+        sha512 = "jQp949ZmEbiYHk3gkbdtpJ0G1+kgtLQBNdP5edFP7Fh+WAYceLQz6yO1SBj72Xkg8GVyTB3bBzAYrHJVh5Xd5g==";
       };
     };
     "flagged-respawn-1.0.0" = {
@@ -2201,7 +2201,7 @@ in
         ];
       })
       sources."findup-sync-2.0.0"
-      sources."fined-1.1.0"
+      sources."fined-1.1.1"
       sources."flagged-respawn-1.0.0"
       sources."for-in-1.0.2"
       sources."for-own-1.0.0"
@@ -2502,10 +2502,10 @@ in
   node-gyp-build = nodeEnv.buildNodePackage {
     name = "node-gyp-build";
     packageName = "node-gyp-build";
-    version = "3.5.1";
+    version = "3.6.0";
     src = fetchurl {
-      url = "https://registry.npmjs.org/node-gyp-build/-/node-gyp-build-3.5.1.tgz";
-      sha512 = "AKJ4SyHiYvqwy5P9GaAnxi5IG3HSEPHV/1YDMlBA0vEEmi7qxeeSfKlCAau3XFvAPFR9EV6gvD9p2b0s8ghyww==";
+      url = "https://registry.npmjs.org/node-gyp-build/-/node-gyp-build-3.6.0.tgz";
+      sha512 = "4yfIUBKGAjjsgRI50D1U5RF8zgOn+xfV8qmP9zQ078erdxIX6dOPCRb37Vj0nm1yaONuWAJJcWwSZqrt+Fq/MA==";
     };
     buildInputs = globalBuildInputs;
     meta = {

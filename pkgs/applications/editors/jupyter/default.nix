@@ -33,9 +33,12 @@ let
     src = "/dev/null";
     unpackCmd = "mkdir home"; # never used
 
-    buildInputs = [ nodejs nodePackages.webpack nodePackages.webpack-cli python3.pkgs.jupyterlab ];
+    nativeBuildInputs = [ nodePackages.webpack nodePackages.webpack-cli ];
+
+    buildInputs = [ nodejs python3.pkgs.jupyterlab ];
 
     buildPhase = ''
+      echo "======== BUILD PHASE ========="
       export HOME=$PWD/home
 
       mkdir -p $out
@@ -49,6 +52,7 @@ let
 
       # npm build
       jupyter lab build --app-dir=$out
+      echo "==== BUILD DONE==== "
     '';
   };
 in
