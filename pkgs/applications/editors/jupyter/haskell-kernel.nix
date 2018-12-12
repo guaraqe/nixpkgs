@@ -1,11 +1,11 @@
-{ haskell
+{ haskellPackages
 , stdenv
 , fetchFromGitHub
 , packages ? (_:[])
 }:
 
 let
-  ghc = haskell.packages.ghc822.ghcWithPackages (p:
+  ghc = haskellPackages.ghcWithPackages (p:
     packages p ++ (with p; [
     ])
   );
@@ -14,11 +14,11 @@ let
     display_name = "Haskell";
     language = "haskell";
     argv = [
-      "${haskell.packages.ghc822.ihaskell}/bin/ihaskell"
+      "${haskellPackages.ihaskell}/bin/ihaskell"
       "kernel"
       "{connection_file}"
       "--ghclib"
-      "${ghc}/lib/ghc-8.2.2"
+      "${ghc}/lib/${ghc.name}"
       "+RTS"
       "-M3g"
       "-N2"
