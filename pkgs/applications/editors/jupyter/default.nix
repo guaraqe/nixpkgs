@@ -4,15 +4,14 @@
 , nodejs
 , nodePackages
 , stdenv
-, kernels ? [ python3.pkgs.ipykernel ]
+, kernels ? [ "${python3.pkgs.ipykernel}/share/jupyter" ]
 , extensions ? [ "@jupyterlab/toc" ] # python3.pkgs.ipywidgets ]
 }:
 
 let
-  # assumes that each kernel has a "share/jupyter/kernels/<kernel>" folder
   # see link for expected kernel specification
   # https://jupyter-client.readthedocs.io/en/stable/kernels.html#kernel-specs
-  jupyterPath = stdenv.lib.concatMapStringsSep ":" (p: "${p}/share/jupyter/") kernels;
+  jupyterPath = stdenv.lib.concatStringsSep ":" kernels;
 
   # assumes that extensions are a list of derivations or strings
   # each derivation has a passthru attribute that specifies jupyterlab npm extensions required
