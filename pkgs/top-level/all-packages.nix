@@ -4361,9 +4361,11 @@ in
 
   jupp = callPackage ../applications/editors/jupp { };
 
-  jupyter = callPackage ../applications/editors/jupyter { };
+  jupyter = callPackage ../applications/editors/jupyter { } { };
 
-  jupyter-kernel = callPackage ../applications/editors/jupyter/kernel.nix { };
+  jupyter-with = callPackage ../applications/editors/jupyter { };
+
+  jupyter-kernels = callPackage ../applications/editors/jupyter/kernels { };
 
   jwhois = callPackage ../tools/networking/jwhois { };
 
